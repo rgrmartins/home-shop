@@ -5,7 +5,7 @@ import { toast } from 'sonner'
 import { useCart } from '@/store/useCart'
 import { priceFormatter } from '@/utils/formatter'
 
-interface ProductItemProps {
+export interface ProductItemProps {
   product: {
     id: number
     isNew?: boolean
@@ -17,6 +17,7 @@ interface ProductItemProps {
     discountValue?: number
     stars?: number
     color?: string
+    category?: string
   }
 }
 

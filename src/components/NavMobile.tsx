@@ -1,4 +1,5 @@
 import { Menu } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 import {
   DropdownMenu,
@@ -15,16 +16,19 @@ const NavMobile = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="flex flex-col items-center justify-center p-1">
         <DropdownMenuLabel className="border-b-2 border-zinc-400">
-          Menu
+          <Link to="/">Home</Link>
         </DropdownMenuLabel>
         <DropdownMenuLabel className="border-b-2 border-zinc-400">
-          Shop
+          <Link to="">Shop</Link>
         </DropdownMenuLabel>
         <DropdownMenuLabel className="border-b-2 border-zinc-400">
-          Product
+          <Link to="">Product</Link>
         </DropdownMenuLabel>
         <DropdownMenuLabel className="border-b-2 border-zinc-400">
-          Contact Us
+          <Link to="">Contact Us</Link>
+        </DropdownMenuLabel>
+        <DropdownMenuLabel className="border-b-2 border-zinc-400">
+          <Link to="/admin/new-product">New Product</Link>
         </DropdownMenuLabel>
       </DropdownMenuContent>
     </DropdownMenu>

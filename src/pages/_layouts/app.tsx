@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Youtube } from 'lucide-react'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 import CartMenu from '@/components/CartMenu'
 import EmailInput from '@/components/EmailInput'
@@ -22,10 +22,16 @@ const AppLayout = () => {
       <div>
         <div className="my-10 hidden w-full items-center justify-center md:flex">
           <nav className="flex items-center justify-center gap-12">
-            <a href="">Home</a>
-            <a href="">Shop</a>
-            <a href="">Product</a>
-            <a href="">Contact Us</a>
+            <Link to="/">Home</Link>
+            <Link to="">Shop</Link>
+            <Link to="">Product</Link>
+            <Link to="">Contact Us</Link>
+            <Link
+              className="rounded-md border-2 border-zinc-500 p-2 hover:border-2 hover:border-zinc-800 hover:bg-zinc-800 hover:text-white"
+              to="/admin/new-product"
+            >
+              New Product
+            </Link>
           </nav>
         </div>
 
@@ -88,10 +94,10 @@ const AppLayout = () => {
           <div className="mb-6 flex w-full max-w-7xl items-center justify-between text-sm text-white md:mb-12">
             <span className="border-l pl-2">Gift & Decoration Store</span>
             <div className="flex flex-col gap-2 md:flex-row md:gap-10">
-              <a href="">Home</a>
-              <a href="">Shop</a>
-              <a href="">Product</a>
-              <a href="">Contact Us</a>
+              <Link to="/">Home</Link>
+              <Link to="">Shop</Link>
+              <Link to="">Product</Link>
+              <Link to="">Contact Us</Link>
             </div>
           </div>
           <div className="flex w-full max-w-7xl items-center justify-between gap-2 border-t py-8 md:pt-4">
@@ -100,12 +106,13 @@ const AppLayout = () => {
                 Copyright &copy; {new Date().getFullYear()} Gift &amp;
                 Decoration Store. All rights reserved
               </span>
-              <a href="" className="text-xs font-semibold">
+              <Link to="" className="text-xs font-semibold">
                 Privacy Policy
-              </a>
-              <a href="" className="text-xs font-semibold">
+              </Link>
+              <Link to="" className="text-xs font-semibold">
                 Terms of Use
-              </a>
+              </Link>
+              <Link to="/admin/new-product">New Product</Link>
             </div>
 
             <div className="flex flex-col gap-2 text-white md:flex-row">
