@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { toast } from 'sonner'
 
 interface ProductItemRequestData {
@@ -13,10 +14,21 @@ interface ProductItemRequestData {
   category?: string | null
 }
 
-export const getAllProducts = async () => {
+export const getAllProducts = async ({
+  category,
+  orderPrice,
+}: {
+  category?: string
+  orderPrice?: string
+}) => {
   try {
-    const response = await fetch('http://localhost:3000/products')
-    const data = await response.json()
+    const response = await axios.get('http://localhost:3000/products', {
+      params: {
+        category,
+        orderPrice,
+      },
+    })
+    const { data } = await response
     return data
   } catch (error) {
     console.error('Error fetching products', error)
@@ -29,12 +41,10 @@ export const createNewProductMutation = async (
   product: ProductItemRequestData,
 ) => {
   try {
-    await fetch('http://localhost:3000/new-product', {
-      method: 'POST',
+    await axios.post('http://localhost:3000/new-product', product, {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(product),
     })
   } catch (error) {
     console.error('Error creating new product', error)
