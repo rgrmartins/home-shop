@@ -15,7 +15,7 @@ This frontend is responsible to building a React/Tailwind app that will render t
 - Zustand
 - Framer Motion
 - Sonner (Toast)
--Typescript
+- Typescript
 
 ## Pages
 This project has two pages:
