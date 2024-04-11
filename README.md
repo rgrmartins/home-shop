@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Home Shop - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💫 Welcome! 🎉
 
-Currently, two official plugins are available:
+This frontend is responsible to building a React/Tailwind app that will render the React Components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+- ReactJS
+- Tailwind
+- Shadcn UI
+- Axios
+- Tanstack Query V5
+- Zod
+- React Hook forms
+- Zustand
+- Framer Motion
+- Sonner (Toast)
+-Typescript
 
-## Expanding the ESLint configuration
+## Pages
+This project has two pages:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### | Home
+This page is responsible to show a product list and filters ans options to sort.
 
-- Configure the top-level `parserOptions` property like this:
+### | New Product
+This page is responsible to request to API to create a new component, and invalidate query to get product list again in API.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Getting Set Up
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The FRONTEND requires [Node.js](https://nodejs.org/en/) to be installed. We recommend using the LTS version.
+
+1. In the repo root directory, run `pnpm install` to gather all dependencies.
+
+1. Then run `pnpm dev` which should start the server.
+
+1. The frontend is pointing to the api with port `3000`, if the API is running on a different port it will be necessary to change the `src/api/products.ts` file.
+
+## Thank You
